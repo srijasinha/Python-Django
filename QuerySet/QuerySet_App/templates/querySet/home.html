@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Information</title>
+    <style>
+        table, th, tr, td {
+        border: 1px solid black
+        }
+    </style>
+</head>
+<body>
+<table>
+<h3>Student Info</h3>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Roll</th>
+    <th>City</th>
+    <th>Status</th>
+    <th> Marks </th>
+
+  {% for student in students %}
+    <tr>
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.roll}}</td>
+        <td>{{student.city}}</td>
+        <td>{{student.status}}</td>
+        <td>{{student.marks}}</td>
+    </tr>
+  {% endfor %}
+  </table>
+</body>
+</html>
